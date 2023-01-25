@@ -1,0 +1,24 @@
+{
+  "name": "letter-generator",
+  "version": "1.0.0",
+  "description": "Academic letter generator",
+  "main": "index.html",
+  "scripts": {
+    "compile:sass": "node-sass ./sass/main.scss  ./resources/style.css",
+    "watch:sass":"nodemon -e scss -x \"npm run compile:sass\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sadick-yakubu/letter-generator.git"
+  },
+  "author": "Sadick Yakubu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sadick-yakubu/letter-generator/issues"
+  },
+  "homepage": "https://github.com/sadick-yakubu/letter-generator#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
+  }
+}
