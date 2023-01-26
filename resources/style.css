@@ -14,7 +14,8 @@ nav {
   width: 100%;
   height: 7rem;
   background: #23068f;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2); }
 
 nav .navbar {
   height: 100%;
@@ -61,3 +62,24 @@ nav .navbar .nav-links .links li .arrow {
 
 .navbar .nav-links .links li:hover .arrow {
   transform: rotate(180deg); }
+
+.navbar .nav-links .links .submenu {
+  background: #23068f;
+  position: absolute;
+  top: 7rem;
+  left: 0;
+  line-height: 4rem;
+  border-radius: 0 0 .7rem .7rem;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+  display: none; }
+
+.navbar .nav-links .links .submenu li {
+  padding: 0 2.2rem;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1); }
+
+.navbar .nav-links .links .submenu li a {
+  font-size: 1.5rem;
+  font: 500; }
+
+.navbar .nav-links .links li:hover .submenu {
+  display: block; }
