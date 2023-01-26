@@ -1,9 +1,9 @@
-.search-box{
+.navbar .search-box{
     position: relative;
     height: 4rem;
     width: 4rem;
 }
-.bx-search{
+.navbar .search-box i{
     color: $white;
     position: absolute;
     width: 100%;
@@ -12,17 +12,28 @@
     font-size: 2.2rem;
     text-align: center;
     font-weight: 500;
+    cursor: pointer;
+    transition: all .3s ease;
 }
-.input-box{
+.navbar .search-box .input-box{
     height: 6rem;
     width: 30rem;
     background: $primary;
     position: absolute;
-    top: 6.5rem;
+    top: 8rem;
     right: calc((100%) - (4rem));
     border-radius: .6rem;
+    transition: all .3s ease;
+    opacity: 0;
+    pointer-events: none;
 }
-.input-box::before{
+.navbar .showInput .search-box .input-box{
+    top: 8rem;
+    opacity: 1;
+    pointer-events: auto;
+    background: $primary;
+}
+.search-box .input-box::before{
     content: '';
     position: absolute;
     width: 2rem;
@@ -32,7 +43,7 @@
     top: -.6rem;
     transform: rotate(45deg);
 }
-.search-file{
+.search-box .input-box.search-file{
     position: absolute;
     height: 3.5rem;
     width: 28rem;
