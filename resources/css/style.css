@@ -1,3 +1,10 @@
+@charset "UTF-8";
+/* Mobile – 360 x 640; 375 x 667; 360 x 720.
+    Tablet – 768 x 1024.
+    iPhone – 375 x 812.
+    Laptop – 1366 x 768.
+    Desktop or high-resolution laptop – 1920 x 1080
+*/
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +31,7 @@ nav .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px; }
+  padding: 0 5rem; }
 
 nav .navbar .logo a {
   color: #fff;
@@ -50,7 +57,9 @@ nav .navbar .nav-links .links li a {
   height: 100%;
   color: #fff;
   text-decoration: none;
-  white-space: nowrap; }
+  white-space: nowrap;
+  font-size: 1.6rem;
+  font-weight: 500; }
 
 nav .navbar .nav-links .links li .arrow {
   height: 100%;
