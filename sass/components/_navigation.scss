@@ -7,10 +7,12 @@ nav{
     background: $primary;
     font-size: $default-font-size;
     box-shadow: 0 .1rem .2rem rgba(0,0,0,.2);
+    z-index: 99;
 }
 nav .navbar{
     height: 100%;
-    max-width: 1250px;
+    max-width: 125rem;
+    width: 100%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -27,17 +29,18 @@ nav .navbar .nav-links{
     height: 100%;
     line-height: 7rem;
 }
-nav .navbar .nav-links .links{
+nav .navbar .links{
     display: flex;
 }
-nav .navbar .nav-links .links li{
+nav .navbar .links li{
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     list-style: none;
     padding: 0 1.5rem;
 }
-nav .navbar .nav-links .links li  a{
+nav .navbar .links li  a{
     height: 100%;
     color: #fff;
     text-decoration: none;
@@ -45,18 +48,19 @@ nav .navbar .nav-links .links li  a{
     font-size: 1.6rem;
     font-weight: 500;
 }
-nav .navbar .nav-links .links li .arrow{
+.links li:hover .arrow{
+    transform: rotate(180deg);
+}
+nav .navbar .links li .arrow{
     height: 100%;
     line-height: 7rem;
     width: 2rem;
     text-align: center;
+    display: inline-block;
     color: $white;
     transition: all 0.3s ease;
 }
-.navbar .nav-links .links li:hover  .arrow{
-    transform: rotate(180deg);
-}
-.navbar .nav-links .links .submenu{
+nav .navbar .links li .submenu{
     background: $primary;
     position: absolute;
     top: 7rem;
@@ -65,15 +69,23 @@ nav .navbar .nav-links .links li .arrow{
     border-radius: 0 0 .7rem .7rem;
     box-shadow: 0 .1rem .2rem rgba(0,0,0,.2);
     display: none;
+    z-index: 2;
 }
-.navbar .nav-links .links .submenu li{
+nav .navbar .links li:hover .submenu{
+    display: block;
+}
+.navbar .links li .submenu li{
     padding: 0 2.2rem;
     border-bottom: .1rem solid rgba(255,255,255,.1);
 }
-.navbar .nav-links .links .submenu li a{
+.navbar .links li .submenu a{
+    color: #fff;
     font-size: 1.7rem;
-    font: 500;
+    font-weight: 500;
 }
-.navbar .nav-links .links li:hover .submenu{
-    display: block;
+.navbar .nav-links .sidebar-logo{
+    display: none;
+}
+.navbar .bx-menu{
+    display: none;
 }

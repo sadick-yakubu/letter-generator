@@ -1,48 +1,82 @@
-@media (max-width: 954px){
+@media (max-width: 920px){
     nav .navbar{
         max-width: 100%;
         padding: 0 2.5rem;  
     }
     nav .navbar .logo a{
-        font-size: 2.5rem;
+        font-size: 2.7rem;
     }
-    nav .navbar .nav-links .links li{
+    nav .navbar .links li{
         padding: 0 1rem;
+        white-space: nowrap;
     }
-    nav .navbar .nav-links .links li  a{
+    nav .navbar .links li  a{
         font-size: 1.5rem;
     }
 }
 @media (max-width: 800px){
+    .navbar .bx-menu{
+        display: block;
+    }
+    nav .navbar .logo a{
+        display: none;
+    }
     nav .navbar .nav-links{
         position: fixed;
         display: block;
-        left: -100;
-        top: 0%;
+        left: 0;
+        top: 0;
         max-width: 27rem;
         width: 100%;
         background: #23068f;
         padding: 2rem;
         line-height: 4rem;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+        transition: all 0.5s ease;
+        z-index: 100;
     }
-    nav .navbar .nav-links .links{
-        display: block;
-        margin-top: 2rem;
-    }
-    nav .navbar .nav-links .sidebar-logo{
+    .navbar .nav-links .sidebar-logo{
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    .logo-name{
+    .sidebar-logo .logo-name{
+        font-size: 2rem;
         color: #fff;
-        font-size: 2.5rem;
-        font-weight:500;
     }
-    .nav-links .sidebar-logo .bx-x,
+    .sidebar-logo i,
     .navbar .bx-menu{
         color: #fff;
         font-size: 2.5rem;
-        font-weight: 500;
+    }
+    nav .navbar .links{
+        display: block;
+        margin-top: 2rem;
+    }
+    nav .navbar .links li .arrow{
+        line-height: 4rem;
+    }
+    nav .navbar .links li{
+        display: block;
+    }
+    nav .navbar .links li .submenu{
+        position: relative;
+        top: 0;
+        box-shadow: none;
+        display: none;
+    }
+    nav .navbar .links li .submenu li{
+        border-bottom: none;
+    }
+    .navbar .nav-links.show .links .submenu{
+        display: block;
+    }
+    .navbar .nav-links.show .links .arrow{
+        transform: rotate(180deg);
+    }
+}
+@media (max-width: 370px){
+    nav .navbar .nav-links{
+        max-width: 100%;
     }
 }

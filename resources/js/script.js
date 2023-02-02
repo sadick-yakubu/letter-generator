@@ -11,3 +11,19 @@ searchBox.addEventListener("click", ()=>{
     searchBox.classList.replace("bx-x" ,"bx-search");
   }
 });
+
+// sidebar open close js code
+let navLinks = document.querySelector(".nav-links");
+let menuOpenBtn = document.querySelector(".navbar .bx-menu");
+let menuCloseBtn = document.querySelector(".nav-links .bx-x");
+menuOpenBtn.onclick = function() {
+navLinks.style.left = "0";
+}
+menuCloseBtn.onclick = function() {
+navLinks.style.left = "-100%";
+}
+// sidebar submenu open close js code
+let arrow = document.querySelector(".arrow");
+arrow.onclick = function() {
+ navLinks.classList.toggle("show");
+}
