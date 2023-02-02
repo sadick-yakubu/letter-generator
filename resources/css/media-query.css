@@ -15,6 +15,13 @@
     }
 }
 @media (max-width: 800px){
+    .btn:link, .btn:visited, .btn:active, .btn:hover{
+            font-size: 2rem;
+            width: 15rem;
+            padding:2rem;
+            border-radius: 4rem;
+            border: .1rem solid #23068f;
+        }
     .navbar .bx-menu{
         display: block;
     }
@@ -74,9 +81,13 @@
     .navbar .nav-links.show .links .arrow{
         transform: rotate(180deg);
     }
+
 }
 @media (max-width: 370px){
     nav .navbar .nav-links{
         max-width: 100%;
+    }
+    .btn{
+        display: none;
     }
 }
