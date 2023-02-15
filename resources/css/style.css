@@ -217,14 +217,13 @@ form > div.active {
 .form-three.active ~ .btn-group {
   justify-content: space-between; }
 
+form button {
+  font-size: 1.8rem; }
+
 form button i {
-  margin: 0 3px; }
-
-.btn-prev i {
-  transform: rotate(180deg); }
-
-.btn-generate i {
-  transform: rotate(270deg); }
+  margin: 0 6px;
+  color: #fff;
+  font-size: 2rem; }
 
 nav {
   position: relative;
