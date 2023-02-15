@@ -5,8 +5,23 @@
     font-family: "Poppins", sans-serif;
 }
 html{
+    scroll-behavior: smooth;
     font-size: 62.5%;
 }
 body{
     min-height: 100vh;
+    line-height: 1.1;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+h1,h2,h3{
+    font-weight: 700;
+    line-height: 1.25;
+    margin: auto;
+    padding-bottom: 2rem;
 }

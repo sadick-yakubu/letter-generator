@@ -1,5 +1,5 @@
 nav{
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -8,6 +8,7 @@ nav{
     font-size: $default-font-size;
     box-shadow: 0 .1rem .2rem rgba(0,0,0,.2);
     z-index: 99;
+    //display: none;
 }
 nav .navbar{
     height: 100%;

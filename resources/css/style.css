@@ -14,13 +14,220 @@
   font-family: "Poppins", sans-serif; }
 
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%; }
 
 body {
-  min-height: 100vh; }
+  min-height: 100vh;
+  line-height: 1.1; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+ul {
+  list-style: none; }
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.25;
+  margin: auto;
+  padding-bottom: 2rem; }
+
+.container {
+  position: block;
+  max-width: 110rem;
+  width: 100%;
+  border-radius: 5px;
+  padding: 0 2rem;
+  margin: auto;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); }
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  border: 0.8rem solid #3907f1;
+  border-radius: 1.5rem;
+  background-color: #fff; }
+
+/* ==> Progress Sidebar */
+.form-box .progress {
+  position: relative;
+  padding: 1rem; }
+
+.progress .form-title {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 30%;
+  margin-bottom: 3rem;
+  text-align: center; }
+
+.form-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2.5px;
+  width: 9rem;
+  border-radius: 8px;
+  background-color: #23068f; }
+
+/* ==> Progress Steps */
+.progress ul.progress-steps {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 5rem; }
+
+.progress ul.progress-steps li {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem; }
+
+.progress ul.progress-steps li > span {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  background-color: #cbcace;
+  z-index: 1; }
+
+.progress ul.progress-steps li.active > span {
+  color: #fff;
+  background-color: #3907f1;
+  border: 0.4rem solid #23068f;
+  z-index: 1; }
+
+.progress ul.progress-steps li p {
+  font-size: 1.2rem;
+  margin: auto; }
+
+.progress ul li p {
+  position: absolute;
+  top: -3rem;
+  font-size: 1.2rem; }
+
+/* ==> Form */
+.form-box form {
+  width: 100%;
+  padding: 3rem 1rem;
+  background-color: #fff;
+  border-radius: 3rem 3rem 1.5rem 1.5rem; }
+
+form > div {
+  max-width: 40rem;
+  margin: 0 auto;
+  margin-bottom: 2rem; }
+
+form > div > div:not(.checkbox) {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem; }
+
+form input, select {
+  outline-color: #23068f;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  border-radius: .7rem;
+  border: 0.1rem solid #3907f1;
+  padding: 0 1.5rem;
+  height: 5rem;
+  margin: 8px 0; }
+
+form input:focus,
+form select:focus {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13); }
+
+form label {
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+  font-weight: 550;
+  color: #2e2e2e; }
+
+select,
+input[type="date"] {
+  color: #707070; }
+
+input[type="date"]:valid {
+  color: #333; }
+
+form .checkbox input {
+  height: auto; }
+
+form > div:not(.btn-group) {
+  display: none; }
+
+form > div.active {
+  display: block;
+  animation: fadeIn 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+
+::placeholder {
+  color: #cbcace; }
+
+.form-one {
+  margin-top: 2.5rem;
+  padding-bottom: 1.5rem; }
+
+/* ==> Buttons */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  margin-top: 2rem; }
+
+.btn-group [class*="btn-"] {
+  background-color: #3907f1;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: 0.4rem solid #23068f;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: all .3s ease-out; }
+
+.btn-group [class*="btn-"]:disabled {
+  background-color: #cbcace;
+  border-color: #d5d4d8;
+  cursor: text; }
+
+.btn-group [class*="btn-"]:hover:not(:disabled) {
+  background-color: #170361;
+  border-color: #23068f; }
+
+.btn-group .btn-generate,
+.form-three.active ~ .btn-group .btn-next {
+  display: none; }
+
+.form-three.active ~ .btn-group .btn-generate {
+  display: block; }
+
+.form-three.active ~ .btn-group {
+  justify-content: space-between; }
+
+form button i {
+  margin: 0 3px; }
+
+.btn-prev i {
+  transform: rotate(180deg); }
+
+.btn-generate i {
+  transform: rotate(270deg); }
 
 nav {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -197,3 +404,11 @@ nav .navbar .links li:hover .submenu {
 .btn:active {
   transform: scale(0.8);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
